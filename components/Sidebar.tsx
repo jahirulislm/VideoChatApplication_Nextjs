@@ -1,7 +1,37 @@
+"use client";
 import React from "react";
-
+import { sidebarLinks } from "@/contants";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 function Sidebar() {
-  return <div>Sidebar</div>;
+  // look for the pathname of the sidebar
+  const pathname = usePathname();
+
+  // check if the link's route matches the current pathname or if it starts with it
+
+  return (
+    <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w[264px]">
+      <div className="flex flex-col gap-6">
+        {sidebarLinks.map((link) => {
+          const isActive =
+            pathname === link.route || pathname.startsWith(link.route);
+          return (
+            <Link
+              href={link.route}
+              key={link.label}
+              className={cn(
+                "flex gap-4 items-center p-4 rounded-lg justify-start",
+                { "bg-blue-1": isActive }
+              )}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
 
 export default Sidebar;
