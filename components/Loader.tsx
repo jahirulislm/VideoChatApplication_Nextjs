@@ -5,7 +5,7 @@ function Loader() {
   return (
     <div className="flex-center h-screen w-full">
       <Image
-        src={"/icons/leading-circle.svg"}
+        src={"/icons/loading-circle.svg"}
         alt="leading"
         width={50}
         height={50}
