@@ -3,9 +3,10 @@ import React from "react";
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <StreamVideoProvider>
-      <main>{children}</main>
-    </StreamVideoProvider>
+    <main>
+      <StreamVideoProvider>{children}</StreamVideoProvider>
+      {/* {children} */}
+    </main>
   );
 }
 

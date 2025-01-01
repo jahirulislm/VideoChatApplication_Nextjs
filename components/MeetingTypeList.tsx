@@ -12,7 +12,7 @@ function MeetingTypeList() {
   const router = useRouter();
   const [meetingState, setMeetingState] = useState<
     "isScheduleMeeting" | "isJoinMeeting" | "isInstantMeeting" | undefined
-  >(undefined);
+  >();
   const [values, setValues] = useState({
     dateTime: new Date(),
     description: "",
@@ -51,7 +51,7 @@ function MeetingTypeList() {
 
       setcallDetails(call);
 
-      if (!values.description) {
+      if (values.description) {
         router.push(`/meeting/${call.id}`);
       }
     } catch (error) {}
