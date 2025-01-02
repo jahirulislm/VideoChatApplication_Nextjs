@@ -8,6 +8,7 @@ import MeetingModal from "./MeetingModal";
 import { useUser } from "@clerk/nextjs";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import Loader from "./Loader";
+import { useToast } from "@/hooks/use-toast";
 
 function MeetingTypeList() {
   const router = useRouter();
@@ -26,14 +27,17 @@ function MeetingTypeList() {
   const client = useStreamVideoClient();
 
   const createMeeting = async () => {
+    const { toast } = useToast();
+
     if (!client || !user) return;
     try {
-      // if (!values.dateTime) {
-      //   toast({ title: "Please select a date and time" });
-      //   return;
-      // }
+      if (!values.dateTime) {
+        toast({ title: "Please select a date and time" });
+        return;
+      }
       const id = crypto.randomUUID();
       const call = client.call("default", id);
+      console.log(call);
       if (!call) throw new Error("Failed to create meeting");
       const startsAt =
         values.dateTime.toISOString() || new Date(Date.now()).toISOString();
@@ -47,15 +51,15 @@ function MeetingTypeList() {
         },
       });
       setcallDetails(call);
-      if (values.description) {
+      if (!values.description) {
         router.push(`/meeting/${call.id}`);
       }
-      // toast({
-      //   title: "Meeting Created",
-      // });
+      toast({
+        title: "Meeting Created",
+      });
     } catch (error) {
       console.error(error);
-      // toast({ title: "Failed to create Meeting" });
+      toast({ title: "Failed to create Meeting" });
     }
   };
   if (!client || !user) return <Loader />;
