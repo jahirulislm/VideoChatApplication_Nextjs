@@ -54,7 +54,9 @@ function MeetingTypeList() {
       if (values.description) {
         router.push(`/meeting/${call.id}`);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
