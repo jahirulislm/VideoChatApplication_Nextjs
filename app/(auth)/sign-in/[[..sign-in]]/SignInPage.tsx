@@ -2,9 +2,9 @@ import React from "react";
 import { SignIn } from "@clerk/nextjs";
 function SignInPage() {
   return (
-    <main>
+    <div>
       <SignIn />
-    </main>
+    </div>
   );
 }
 

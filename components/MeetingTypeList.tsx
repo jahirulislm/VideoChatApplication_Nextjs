@@ -8,7 +8,7 @@ import MeetingModal from "./MeetingModal";
 import { useUser } from "@clerk/nextjs";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import Loader from "./Loader";
-import { useToast } from "@/hooks/use-toast";
+import { toast, useToast } from "@/hooks/use-toast";
 
 function MeetingTypeList() {
   const router = useRouter();
@@ -27,8 +27,6 @@ function MeetingTypeList() {
   const client = useStreamVideoClient();
 
   const createMeeting = async () => {
-    const { toast } = useToast();
-
     if (!client || !user) return;
     try {
       if (!values.dateTime) {
@@ -37,7 +35,6 @@ function MeetingTypeList() {
       }
       const id = crypto.randomUUID();
       const call = client.call("default", id);
-      console.log(call);
       if (!call) throw new Error("Failed to create meeting");
       const startsAt =
         values.dateTime.toISOString() || new Date(Date.now()).toISOString();
@@ -97,7 +94,7 @@ function MeetingTypeList() {
       <MeetingModal
         isOpen={meetingState === "isInstantMeeting"}
         onClose={() => setMeetingState(undefined)}
-        title="Instant Meeting"
+        title="Start an Instant Meeting"
         className="text-center"
         buttonText="Start Meeting"
         handleClick={createMeeting}
