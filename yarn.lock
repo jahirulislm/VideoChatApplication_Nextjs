@@ -638,10 +638,10 @@
     jsonwebtoken "^9.0.2"
     uuid "^9.0.1"
 
-"@stream-io/video-client@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@stream-io/video-client/-/video-client-1.13.1.tgz#3942e45dfad023a08f7cb212317460dce90bdda0"
-  integrity sha512-vtOvuSb5cfECrdJwGnkWEpB1doGc4My3g+n9b7imwsMgzT3jhx0bqKxJvcj88dpzool0GK4wStjgUe/f7kxUZg==
+"@stream-io/video-client@1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@stream-io/video-client/-/video-client-1.14.0.tgz#a1b217320e95f0477aaf7558905d5554d9dd1c2c"
+  integrity sha512-UQgJKffa78hnWAq0EeyPH4M4G9BsSkLwu+Dt/4R3cm/bdGMXeIvKwl7xDIn53HfcSXy0C6E1ErplOwoMxjmNQQ==
   dependencies:
     "@protobuf-ts/runtime" "^2.9.4"
     "@protobuf-ts/runtime-rpc" "^2.9.4"
@@ -659,23 +659,23 @@
   dependencies:
     wasm-feature-detect "^1.6.1"
 
-"@stream-io/video-react-bindings@1.2.16":
-  version "1.2.16"
-  resolved "https://registry.yarnpkg.com/@stream-io/video-react-bindings/-/video-react-bindings-1.2.16.tgz#029b6af64e55864f5cce62c23674a17b2503df0a"
-  integrity sha512-KiJSt3dpgUWelHGu+HvzmSksyZ/Hu/puVB6Ve0x/EUTc/cwHvuZcxEkVP88IzPBB9KxIsLgEq4FIkYNkVL1oiw==
+"@stream-io/video-react-bindings@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@stream-io/video-react-bindings/-/video-react-bindings-1.3.0.tgz#8c17f7e7ce0bbc8320acf78c1940c65b575831d7"
+  integrity sha512-K8B1yAbztBeEwvaSWVSgK4XRhGRqvIlZ+LhtUBY/NFMaobgQcu86SNDOCP5gQEyjywurxoaCOTQhL54xPQAJjw==
   dependencies:
     i18next "^23.5.1"
     rxjs "~7.8.1"
 
-"@stream-io/video-react-sdk@^1.8.7":
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/@stream-io/video-react-sdk/-/video-react-sdk-1.8.7.tgz#43eb305f1fff3cf9d43f3ff7627717280d8be373"
-  integrity sha512-6Jk+m6NJ2kahQo4C1qR15R1RkcNNhzrjwiCVujVt1xUGJJre7ihcYXT3UUju0k2cjh6S2IPKhxRdCXm6D+JTUA==
+"@stream-io/video-react-sdk@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@stream-io/video-react-sdk/-/video-react-sdk-1.9.0.tgz#e34d669cecbbbc58c83f4210411112f88b9fd616"
+  integrity sha512-lwLbKIp8eBcMMdMDE9/eLNgQODkdhvfI8mbmX32yYg4xtkb66AQYHgwGe0JYw0VA6AUPX2p0UA6yPTdRghbHog==
   dependencies:
     "@floating-ui/react" "^0.26.24"
-    "@stream-io/video-client" "1.13.1"
+    "@stream-io/video-client" "1.14.0"
     "@stream-io/video-filters-web" "0.1.6"
-    "@stream-io/video-react-bindings" "1.2.16"
+    "@stream-io/video-react-bindings" "1.3.0"
     chart.js "^4.4.4"
     clsx "^2.0.0"
     react-chartjs-2 "^5.2.0"

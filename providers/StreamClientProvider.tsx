@@ -7,7 +7,7 @@ import tokenProvider from "@/actions/stream.actions";
 const apiKey = process.env.NEXT_PUBLIC_STREAM_VIDEO_API_KEY;
 
 
-export const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
+export const StreamVideoProvider = ({ children }: { children: React.ReactNode }) => {
   const [videoClient, setVideoClient] = useState<StreamVideoClient>();
   const { user, isLoaded } = useUser();
 
@@ -28,5 +28,9 @@ export const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
     setVideoClient(client);
   }, [user, isLoaded]);
   if (!videoClient) return <Loader />;
-  return <StreamVideo client={videoClient}>{children}</StreamVideo>;
+  return (
+    <StreamVideo client={videoClient}>
+      {children}
+    </StreamVideo>
+  );
 };
