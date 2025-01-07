@@ -5,10 +5,7 @@ import { ReactNode, useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import tokenProvider from "@/actions/stream.actions";
 const apiKey = process.env.NEXT_PUBLIC_STREAM_VIDEO_API_KEY;
-// TODO:
-// const userId = process.env.STREAM_SECRET_KEY;
-// const token = "authentication-token";
-// const user: User = { id: userId };
+
 
 export const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   const [videoClient, setVideoClient] = useState<StreamVideoClient>();

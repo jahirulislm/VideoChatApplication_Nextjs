@@ -16,7 +16,7 @@ function Home() {
     <section className="flex size-full flex-col gap-10 text-white">
       <div className="h-[300px] w-full rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-10">
-          <h2>Upcoming Meetings</h2>
+          <h2>A Video Chatting Application like Zoom</h2>
           <div className="flex flex-col gap-2">
             <h1>{time}</h1>
             <p>{date}</p>

@@ -48,7 +48,7 @@ function MeetingTypeList() {
         },
       });
       console.log(setcallDetails(call))
-      
+
       if (!values.description) {
         let rt = router.push(`/meeting/${call.id}`);
         console.log(rt)
@@ -75,21 +75,21 @@ function MeetingTypeList() {
         img="/icons/schedule.svg"
         title="Schedule meeting"
         description="Start an instant meeting"
-        handleClick={() => {}}
-        className="bg-red-500"
+        handleClick={() => { }}
+        className="bg-gradient-to-t from-indigo-500 from-20% via-30% to-emerald-500 to-60%"
       />
       <HomeCard
         img="/icons/recordings.svg"
         title="View recording"
         description="Start an instant meeting"
-        handleClick={() => {}}
+        handleClick={() => { }}
         className="bg-yellow-500"
       />
       <HomeCard
         img="/icons/join-meeting.svg"
         title="Join the meeting"
         description="Start an instant meeting"
-        handleClick={() => {}}
+        handleClick={() => { }}
         className="bg-green-500"
       />
 
