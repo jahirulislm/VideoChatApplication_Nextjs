@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   title: "YOOM",
   description: "Video calling App",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/favicon-16x16.png",
   },
 };
 
