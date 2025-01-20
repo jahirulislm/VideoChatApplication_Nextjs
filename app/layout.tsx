@@ -1,5 +1,3 @@
-
-
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -14,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "YOOM",
-  description: "Video calling App",
+  description: "Video Chating App",
   icons: {
     icon: "/icons/favicon-16x16.png",
   },
